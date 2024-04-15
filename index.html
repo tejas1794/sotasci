@@ -5,95 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOTA Science Inc.</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.css" rel="stylesheet">
     <style>
-        body {
-            background-color: #000;
-            color: #fff;
+        body, html {
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            font-family: 'Arial', sans-serif;
         }
-        .hero-section {
-            padding: 100px 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x800') center / cover no-repeat;
+        #fullpage .section {
+            position: relative;
             text-align: center;
             color: white;
+            background-size: cover;
+            background-position: center;
         }
-        .feature {
-            margin: 30px 0;
-            background: none;
-            border: none;
+        .section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
         }
-        .feature-icon {
-            font-size: 50px;
-            animation: icon-animation 5s infinite;
+        .content {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
         }
-        @keyframes icon-animation {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p {
+            width: 50%;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+        .logo {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        .logo img {
+            height: 60px;
+        }
+        .app-development {
+            background-image: url('https://via.placeholder.com/1920x1080?text=App+Development');
+        }
+        .ai-research {
+            background-image: url('https://via.placeholder.com/1920x1080?text=AI+Research');
+        }
+        .tech-impact {
+            background-image: url('https://via.placeholder.com/1920x1080?text=Tech+Impact');
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">SOTA Science Inc.</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="logo">
+        <img src="https://via.placeholder.com/150x60?text=SOTA+Logo" alt="SOTA Science Inc. Logo">
+    </div>
+    <div id="fullpage">
+        <div class="section app-development">
+            <div class="content">
+                <h1>App Development</h1>
+                <p>Building cutting-edge applications powered by advanced artificial intelligence to enhance business operations and consumer experiences.</p>
             </div>
-        </nav>
-    </header>
-    <section class="hero-section">
-        <div class="container">
-            <h1>Welcome to SOTA Science Inc.</h1>
-            <p class="lead">Pioneering Artificial Intelligence Solutions</p>
-            <a href="#" class="btn btn-primary btn-lg">Learn More</a>
         </div>
-    </section>
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card feature">
-                    <div class="card-body">
-                        <i class="bi bi-cpu-fill feature-icon"></i>
-                        <h3>AI Research</h3>
-                        <p>Advanced research in AI algorithms.</p>
-                    </div>
-                </div>
+        <div class="section ai-research">
+            <div class="content">
+                <h1>AI Research</h1>
+                <p>Conducting groundbreaking research in artificial intelligence to push the boundaries of technology and innovation.</p>
             </div>
-            <div class="col-md-4">
-                <div class="card feature">
-                    <div class="card-body">
-                        <i class="bi bi-graph-up feature-icon"></i>
-                        <h3>App Development</h3>
-                        <p>Building AI-driven applications.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card feature">
-                    <div class="card-body">
-                        <i class="bi bi-people-fill feature-icon"></i>
-                        <h3>Impact</h3>
-                        <p>Making a difference with technology.</p>
-                    </div>
-                </div>
+        </div>
+        <div class="section tech-impact">
+            <div class="content">
+                <h1>Tech Impact</h1>
+                <p>Creating significant impacts across various industries through technological innovations and solutions that improve lives.</p>
             </div>
         </div>
     </div>
-    <footer class="text-center bg-dark py-3">
-        <p>&copy; 2024 SOTA Science Inc. All rights reserved.</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            scrollHorizontally: true
+        });
+    </script>
 </body>
 </html>
