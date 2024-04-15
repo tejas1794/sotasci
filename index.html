@@ -56,14 +56,17 @@
         .logo img {
             height: 60px;
         }
-        .app-development {
+        .app-development, .ai-research, .tech-impact {
             background-image: url('https://via.placeholder.com/1920x1080?text=App+Development');
         }
-        .ai-research {
-            background-image: url('https://via.placeholder.com/1920x1080?text=AI+Research');
-        }
-        .tech-impact {
-            background-image: url('https://via.placeholder.com/1920x1080?text=Tech+Impact');
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -91,6 +94,9 @@
             </div>
         </div>
     </div>
+    <footer>
+        <a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
     <script>
         new fullpage('#fullpage', {
