@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support | Sotasci</title>
+<meta name="description" content="Get help with Ember Quest or Sellsnap: frequently asked questions and how to reach us.">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="" width="32" height="32">
+      <span>Sotasci</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ember-quest.html">Ember Quest</a></li>
+        <li><a href="sellsnap.html">Sellsnap</a></li>
+        <li><a href="support.html" aria-current="page">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="wrap">
+      <h1>Support</h1>
+      <p class="lede">Answers to common questions, plus how to reach us if you're stuck.</p>
+
+      <h2>Ember Quest</h2>
+      <div class="faq">
+        <details>
+          <summary>Do I need an account to use Ember Quest?</summary>
+          <p>No. The core game — your character, stats, quests, and journal — works fully offline with no account. An account is only relevant if you turn on optional social features like friends or leaderboards.</p>
+        </details>
+        <details>
+          <summary>Does the AI companion send my data anywhere?</summary>
+          <p>Not by default. The AI companion runs on your device using a bundled small model. It only sends data off your device if you choose to enable cloud AI with your own API key. See our <a href="privacy.html">privacy policy</a> for details.</p>
+        </details>
+        <details>
+          <summary>How do I join the beta?</summary>
+          <p>Use our <a href="contact.html?subject=Ember%20Quest%20beta">contact form</a> and let us know you'd like in — we're onboarding testers in small batches.</p>
+        </details>
+        <details>
+          <summary>I found a bug. What should I include in my report?</summary>
+          <p>Please include: your device model and OS version (e.g. "Pixel 8, Android 15" or "iPhone 14, iOS 18"), the app version if you can find it in Settings, what you expected to happen, what actually happened, and steps to reproduce it. A screenshot or screen recording helps a lot. Send it through our <a href="contact.html">contact form</a>.</p>
+        </details>
+      </div>
+
+      <h2>Sellsnap</h2>
+      <div class="faq">
+        <details>
+          <summary>Is Sellsnap finished?</summary>
+          <p>No — it's an early preview / proof of concept. Identification and pricing are actively being improved, and we're validating whether they're accurate and useful enough for everyday use.</p>
+        </details>
+        <details>
+          <summary>Where does the price range come from?</summary>
+          <p>From recent comparable sold listings for similar items, along with the rationale for why those listings were chosen as comparables.</p>
+        </details>
+        <details>
+          <summary>Does Sellsnap store my photos?</summary>
+          <p>No. Photos are sent to a cloud vision service to identify the item and are not stored by us afterward. See our <a href="privacy.html">privacy policy</a> for details.</p>
+        </details>
+        <details>
+          <summary>How do I get notified about updates?</summary>
+          <p>Use our <a href="contact.html?subject=Sellsnap%20updates">contact form</a> to ask to be notified.</p>
+        </details>
+      </div>
+
+      <h2>Still need help?</h2>
+      <p>Reach us through our <a href="contact.html">contact form</a>, or email us directly:</p>
+      <table>
+        <thead>
+          <tr><th>Topic</th><th>Contact</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>General questions, bugs, beta access</td><td><!-- TODO: replace with real inbox before launch --><a href="mailto:hello@sotasci.com">hello@sotasci.com</a></td></tr>
+          <tr><td>Privacy questions</td><td><!-- TODO: replace with real inbox before launch --><a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="mb-0">© 2026 SOTA Science Inc.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

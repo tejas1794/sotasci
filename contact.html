@@ -1,74 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - SOTA Science Inc.</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #005792;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        form {
-            background: white;
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 80%;
-        }
-        label, input, textarea, button {
-            display: block;
-            width: 90%;
-            margin: 10px auto;
-        }
-        input, textarea {
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-        button {
-            background: #007acc;
-            color: white;
-            border: none;
-            padding: 10px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #005792;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Sotasci</title>
+<meta name="description" content="Get in touch with Sotasci — ask a question, join the Ember Quest beta, or get notified about Sellsnap.">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Contact SOTA Science Inc.</h1>
-    </header>
-    <main>
-        <form action="https://formspree.io/f/mgegpgee" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+<a class="skip-link" href="#main">Skip to content</a>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="_replyto" required>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="" width="32" height="32">
+      <span>Sotasci</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ember-quest.html">Ember Quest</a></li>
+        <li><a href="sellsnap.html">Sellsnap</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
+<main id="main">
+  <section class="section">
+    <div class="wrap">
+      <h1>Contact us</h1>
+      <p class="lede">Questions, bug reports, beta requests — this form goes straight to us. You can also email us directly at
+        <!-- TODO: replace with real inbox before launch -->
+        <a href="mailto:hello@sotasci.com">hello@sotasci.com</a>.
+      </p>
 
-            <button type="submit">Send</button>
-        </form>
-    </main>
+      <div class="form-status" id="form-status" role="status" hidden tabindex="-1"></div>
+
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mgegpgee" method="POST">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <!-- Honeypot field: hidden from people, left blank by them; bots that fill
+             every field tip this off. Field name kept off common "email/name"
+             patterns so autofill doesn't grab it. -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="_gotcha">Leave this field blank</label>
+          <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+
+        <input type="hidden" id="subject-field" name="_subject" value="New message from sotasci.com">
+
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="hint">We read every message. If you don't hear back in a few days, feel free to email us directly.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="mb-0">© 2026 SOTA Science Inc.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

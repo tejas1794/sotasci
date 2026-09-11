@@ -1,114 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOTA Science Inc.</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.css" rel="stylesheet">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-            font-family: 'Arial', sans-serif;
-        }
-        #fullpage .section {
-            position: relative;
-            text-align: center;
-            color: white;
-            background-size: cover;
-            background-position: center;
-        }
-        .section::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 30%;
-            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-        }
-        .content {
-            position: absolute;
-            bottom: 20%;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            width: 100%;
-        }
-        h1 {
-            font-size: 48px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        p {
-            width: 50%;
-            margin: 0 auto;
-            font-size: 20px;
-        }
-        .logo {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
-        }
-        .logo img {
-            height: 60px;
-        }
-        .app-development {
-            background-image: url('app.jpg');
-        }
-        .ai-research{
-            background-image: url('ai.png');
-        }
-        .tech-impact {
-            background-image: url('impact.png');
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sotasci — local-first, privacy-conscious AI apps</title>
+<meta name="description" content="Sotasci (SOTA Science Inc.) builds small, local-first apps: Ember Quest, a habit-tracking RPG, and Sellsnap, a second-hand pricing tool.">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="logo">
-        <img src="logo.png" alt="SOTA Science Inc. Logo">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="" width="32" height="32">
+      <span>Sotasci</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="ember-quest.html">Ember Quest</a></li>
+        <li><a href="sellsnap.html">Sellsnap</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Sotasci · Toronto</p>
+      <h1>AI apps that keep your data on your device.</h1>
+      <p class="lede">We're a small studio building apps where the default is local-first: your data stays on your phone unless you explicitly choose otherwise. No dark patterns, no ad trackers, no accounts you didn't ask for.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="contact.html">Get in touch</a>
+        <a class="btn btn-secondary" href="#products">See what we build</a>
+      </div>
     </div>
-    <div id="fullpage">
-        <div class="section app-development">
-            <div class="content">
-                <h1>App Development</h1>
-                <p>Building cutting-edge applications powered by advanced artificial intelligence to enhance business operations and consumer experiences.</p>
-            </div>
-        </div>
-        <div class="section ai-research">
-            <div class="content">
-                <h1>AI Research</h1>
-                <p>Conducting groundbreaking research in artificial intelligence to push the boundaries of technology and innovation.</p>
-            </div>
-        </div>
-        <div class="section tech-impact">
-            <div class="content">
-                <h1>Tech Impact</h1>
-                <p>Creating significant impacts across various industries through technological innovations and solutions that improve lives.</p>
-            </div>
-        </div>
+  </section>
+
+  <section class="section" id="products">
+    <div class="wrap">
+      <h2>What we build</h2>
+      <p class="text-muted">Two apps. Both designed so the AI runs where your data already lives, whenever that's possible.</p>
+
+      <div class="card-grid">
+        <article class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.5 3.5l-9 9 2 2 9-9-2-2z"/>
+            <path d="M6 15l-2.5 5.5L9 18"/>
+            <path d="M13 6l4 4"/>
+          </svg>
+          <span class="status-pill">In testing</span>
+          <h3>Ember Quest</h3>
+          <p>A habit tracker that plays like an idle RPG. Complete real tasks, grow your character's stats, and explore a zone-based world map — with an AI companion that can run entirely on your device.</p>
+          <p><a href="ember-quest.html">Learn more →</a></p>
+        </article>
+
+        <article class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+            <circle cx="12" cy="13" r="3.2"/>
+          </svg>
+          <span class="status-pill">Early preview</span>
+          <h3>Sellsnap</h3>
+          <p>Photograph a second-hand item and get an identification plus a fair price range, based on recent comparable sales.</p>
+          <p><a href="sellsnap.html">Learn more →</a></p>
+        </article>
+      </div>
     </div>
-    <footer>
-        <a href="contact.html" style="color: white; text-decoration: none;">Contact Us</a>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js"></script>
-    <script>
-        new fullpage('#fullpage', {
-            autoScrolling: true,
-            scrollHorizontally: true
-        });
-    </script>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <h2>Our principles</h2>
+      <div class="principles-grid">
+        <div class="principle">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="7" y="2" width="10" height="20" rx="2"/>
+            <path d="M11 18h2"/>
+          </svg>
+          <h3>On-device by default</h3>
+          <p>Where it's technically possible, processing happens on your phone. Nothing needs to leave your device for the app to work.</p>
+        </div>
+        <div class="principle">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.5"/>
+            <path d="M4.5 20c1-3.5 4-5.5 7.5-5.5S18.5 16.5 19.5 20"/>
+            <path d="M4 4l16 16" opacity="0"/>
+          </svg>
+          <h3>No accounts unless needed</h3>
+          <p>If a feature can work without a login, it does. Accounts only show up for things that genuinely require them, like optional social features.</p>
+        </div>
+        <div class="principle">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/>
+            <path d="M9.5 12l1.8 1.8L15 10"/>
+          </svg>
+          <h3>Plain-language privacy</h3>
+          <p>Our privacy policy says what actually happens to your data, in plain English — no legal fog. See it on our <a href="privacy.html">privacy page</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Want to try what we're building?</h2>
+      <p class="text-muted">Ember Quest is in testing and Sellsnap is an early preview. Reach out and we'll let you know when there's something to try.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="contact.html">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="mb-0">© 2026 SOTA Science Inc.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
