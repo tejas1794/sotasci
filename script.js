@@ -18,6 +18,16 @@
     });
   }
 
+  // ---- Sticky glass header: slightly more opaque after scrolling ----
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var updateHeaderState = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 8);
+    };
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+    updateHeaderState();
+  }
+
   // ---- Contact form (progressive enhancement) ----
   var form = document.getElementById("contact-form");
   if (!form) return;
