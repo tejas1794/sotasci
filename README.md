@@ -10,7 +10,7 @@ stylesheet and one small vanilla JS file.
 
 ```
 index.html         Home — hero, product cards, principles, contact CTA
-ember-quest.html    Product page: Ember Quest
+habitography.html    Product page: Habitography
 sellsnap.html       Product page: Sellsnap
 privacy.html        Privacy policy (site + both apps)
 support.html        FAQ + how to get help / file a bug report
@@ -63,10 +63,10 @@ hidden Formspree subject field and seed the message textarea.
 
 ## Product names
 
-**Ember Quest** and **Sellsnap** are placeholder names used throughout this
+**Habitography** and **Sellsnap** are placeholder names used throughout this
 site's copy, filenames, and CTAs. If either app is renamed, update:
 
-- The `<title>` and copy in `ember-quest.html` / `sellsnap.html`
+- The `<title>` and copy in `habitography.html` / `sellsnap.html`
 - Card copy and links on `index.html`
 - FAQ entries on `support.html`
 - App-specific sections of `privacy.html`
