@@ -10,9 +10,11 @@ stylesheet and one small vanilla JS file.
 
 ```
 index.html         Home — hero, product cards, principles, contact CTA
+mieru.html          Product page: Mieru
+mieru-privacy.html  Standalone privacy policy: Mieru (linked from app stores)
 habitography.html    Product page: Habitography
 sellsnap.html       Product page: Sellsnap
-privacy.html        Privacy policy (site + both apps)
+privacy.html        Privacy policy (site + all apps)
 support.html        FAQ + how to get help / file a bug report
 contact.html        Contact form (Formspree) + email fallback
 404.html            GitHub Pages 404 page

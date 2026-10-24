@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mieru Privacy Policy | Sotasci</title>
+<meta name="description" content="Privacy policy for the Mieru game.">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="" width="32" height="32">
+      <span>Sotasci</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+      <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mieru.html">Mieru</a></li>
+        <li><a href="habitography.html">Habitography</a></li>
+        <li><a href="sellsnap.html">Sellsnap</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="section">
+    <div class="wrap">
+      <h1>Mieru Privacy Policy</h1>
+      <p class="text-muted">Effective date: October 23, 2026</p>
+      <p>Mieru ("the app") is a daily puzzle made by SOTA Science Inc. ("Sotasci", "we"). It runs on the web at <a href="https://mieru.web.app" target="_blank" rel="noopener">mieru.web.app</a>, with Android and iOS versions coming. This policy explains what data the app uses and where it goes, in plain language. Questions? Email <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a>.</p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li>You can play without an account. Your progress and settings stay on your device.</li>
+        <li>When you finish a daily puzzle, one anonymous row of game stats is sent to us. It does not identify you.</li>
+        <li>Signing in is optional and only needed for the leaderboard. Leaderboard entries and display names are public.</li>
+        <li>We don't show ads, use advertising IDs, use analytics or crash-reporting SDKs, or sell or share your data.</li>
+      </ul>
+
+      <h2>Data stored on your device</h2>
+      <p>Without signing in, your game progress and settings are saved on your device. Clearing the app's storage or site data removes them.</p>
+
+      <h2>Anonymous daily stats</h2>
+      <p>When you finish a daily puzzle, the app sends one row to our database (Google Firebase Firestore) so we can see how hard each day was. The row contains:</p>
+      <ul>
+        <li>whether you solved it</li>
+        <li>the percent of the picture showing</li>
+        <li>the number of guesses and the number of tries</li>
+        <li>the picture and the difficulty</li>
+        <li>a timestamp</li>
+      </ul>
+      <p>It contains no name, account, or device identifier, and it is not readable by other players. Because it can't be linked to a person, we can't pick out your row later.</p>
+
+      <h2>Signing in (optional)</h2>
+      <p>You only need to sign in to appear on the leaderboard. Sign-in is handled by Firebase Authentication, using Google, Apple, or a link sent to your email. This means your email address is processed by Firebase and Google, and by Apple if you use Apple sign-in. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a> and <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a>.</p>
+      <p>If you sign in, we also store:</p>
+      <ul>
+        <li><strong>A public display name.</strong> You choose it, or you can use one we suggest.</li>
+        <li><strong>A leaderboard entry for each daily you finish.</strong> It contains your display name, points, whether you solved it, percent showing, guesses, tries, solve time, difficulty, and a timestamp.</li>
+      </ul>
+      <p><strong>Leaderboard entries and display names are public to other players.</strong> Don't use a name you wouldn't want others to see. Points are 100 minus the percent of the picture showing when you solved it, minus 5 for each extra guess or retry.</p>
+
+      <h2>Puzzle downloads</h2>
+      <p>The app downloads the day's puzzle file from mieru.web.app, which is hosted on Firebase Hosting. As with any download, the host can see standard connection details such as your IP address.</p>
+
+      <h2>What we don't do</h2>
+      <ul>
+        <li>No ads and no advertising IDs.</li>
+        <li>No analytics or crash-reporting SDKs.</li>
+        <li>We don't sell or share your data.</li>
+      </ul>
+
+      <h2>Pictures</h2>
+      <p>The pixel pictures are made from Twemoji, which is licensed under CC-BY 4.0. It is credited in the app.</p>
+
+      <h2>Your choices and deleting your data</h2>
+      <ul>
+        <li>Play without signing in and no account data is created.</li>
+        <li>Delete local data by clearing the app's storage or site data, or by uninstalling the app.</li>
+        <li>To delete your account, display name, and leaderboard entries, use the delete option in the app's account screen, or ask us through our <a href="contact.html?subject=Mieru%20account%20deletion">contact form</a> or by email at <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a>. Requests sent to us are handled within 30 days.</li>
+        <li>Anonymous stats rows can't be linked to a person, so they can't be singled out for deletion.</li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>Mieru is not directed at children under 13, and we don't knowingly collect data from them. If you believe a child has given us data, contact us and we'll delete it.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>If this policy changes, we'll update the effective date above and, for meaningful changes, note it in the app.</p>
+
+      <h2>Contact</h2>
+      <p>SOTA Science Inc. &middot; <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a> &middot; <a href="contact.html">contact form</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="mb-0">© 2026 SOTA Science Inc.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="mieru-privacy.html">Mieru Privacy</a></li>
+      <li><a href="habitography-privacy.html">Habitography Privacy</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

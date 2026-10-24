@@ -15,6 +15,8 @@
   --ember-2: #ff5f6d;
   --mint: #2dd4bf;
   --mint-2: #22c1a4;
+  --pixel: #ec5fb8;
+  --pixel-2: #b83fd6;
 
   /* ---- Base surface (dark, default) ---- */
   --color-bg: #06070b;
@@ -52,6 +54,7 @@
   --grad-primary: linear-gradient(135deg, var(--indigo), var(--indigo-2));
   --grad-ember: linear-gradient(135deg, var(--ember), var(--ember-2));
   --grad-mint: linear-gradient(135deg, var(--mint), var(--mint-2));
+  --grad-pixel: linear-gradient(135deg, var(--pixel), var(--pixel-2));
   --grad-text: linear-gradient(120deg, var(--mint) 0%, var(--indigo-2) 55%, var(--ember) 100%);
 
   --radius: 20px;
@@ -577,6 +580,12 @@ select:focus-visible,
   }
 }
 
+@media (min-width: 980px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .card {
   border-radius: var(--radius);
   padding: 2rem;
@@ -630,6 +639,10 @@ select:focus-visible,
 
 .icon-tile-mint {
   background: var(--grad-mint);
+}
+
+.icon-tile-pixel {
+  background: var(--grad-pixel);
 }
 
 .status-pill {
@@ -750,6 +763,11 @@ select:focus-visible,
 .product-hero .icon-badge.icon-badge-mint {
   background: var(--grad-mint);
   box-shadow: 0 10px 26px rgba(45, 212, 191, 0.35);
+}
+
+.product-hero .icon-badge.icon-badge-pixel {
+  background: var(--grad-pixel);
+  box-shadow: 0 10px 26px rgba(236, 95, 184, 0.35);
 }
 
 .product-hero .icon-badge svg {
