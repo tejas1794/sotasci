@@ -42,52 +42,55 @@
   <section class="section">
     <div class="wrap">
       <h1>Habitography Privacy Policy</h1>
-      <p class="text-muted">Effective date: September 29, 2026</p>
+      <p class="text-muted">Effective date: November 20, 2026</p>
       <p>Habitography ("the app") is made by SOTA Science Inc. ("Sotasci", "we"). This policy explains what data the app uses and where it goes, in plain language. Questions? Email <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a>.</p>
 
       <h2>The short version</h2>
       <ul>
         <li>Your habits, character, and journal live on your device.</li>
-        <li>By default, the AI companion runs on your device and nothing is sent to us.</li>
-        <li>Data leaves your device only if you choose a cloud or social feature, described below.</li>
+        <li>New installs start with a 7-day Habitography Cloud trial (20 turns/day) identified only by a random device ID, and you can switch to the free downloadable on-device AI at any time so nothing leaves your phone.</li>
         <li>We don't sell your data, show ads, or use third-party analytics or ad trackers.</li>
       </ul>
 
       <h2>Data stored on your device</h2>
-      <p>Your character, stats, tasks, streaks, reminders, journal entries, settings, and any downloaded AI model files are stored locally on your device. Uninstalling the app removes this data. We don't have a copy of it.</p>
+      <p>Your character, stats, tasks, streaks, reminders, journal entries, settings, unspent in-app jewels, and any downloaded AI model files are stored locally on your device. Uninstalling the app or clearing storage removes this data.</p>
 
       <h2>On-device AI</h2>
-      <p>The app can download a small AI model and run it entirely on your phone. In this mode, what you write and the photos you use never leave your device. The model file itself is downloaded from a public host when you choose to install it, which means that host can see a standard download request from your device (such as your IP address).</p>
+      <p>You can download a small AI model inside Settings or Chat and run it entirely on your phone. In this mode, what you write and the photos you verify never leave your device. The model file itself is downloaded from a public host when you choose to install it, which means that host can see a standard download request from your device (such as your IP address).</p>
 
-      <h2>Cloud AI (optional)</h2>
-      <p>You can choose one of two cloud options. Both are off by default.</p>
+      <h2>Cloud AI</h2>
+      <p>You can choose between Habitography Cloud (enabled by default for the 7-day trial, or with a Premium plan) or bringing your own API key:</p>
       <ul>
-        <li><strong>Habitography Cloud plan.</strong> If you subscribe, the text needed to generate a response (for example your message and relevant habit context) is sent to our server, which forwards it to an AI model provider to produce the reply. Our server also keeps a usage count tied to a random device identifier so we can enforce your plan's allowance. We do not use this content to train models, and we do not keep the content of your messages beyond what is needed to answer them.</li>
-        <li><strong>Your own API key.</strong> If you enter your own key from a third-party AI provider, requests go directly from your device to that provider under its own terms and privacy policy. The key is stored on your device only.</li>
+        <li><strong>Habitography Cloud.</strong> The message text and relevant habit context needed to generate a reply (or a photo you submit for Cloud verification) are sent over HTTPS to our Cloud Run proxy and forwarded to Google Vertex AI to produce the reply. Our proxy stores only a daily turn counter and subscription status tied to a random device UUID. We do not log or store the content of your chats or photos, and Google Vertex AI does not use customer prompts to train models.</li>
+        <li><strong>Your own API key.</strong> If you enter your own key from a third-party AI provider (Anthropic, OpenAI, or Gemini), requests go directly from your device to that provider under its own terms and privacy policy. The key is stored on your device only.</li>
       </ul>
 
       <h2>Photos and proof of completion</h2>
-      <p>You can attach a photo as proof that you completed a task. The photo is picked or taken with your permission. With on-device AI, it is analyzed on your device. If you have turned on a cloud AI option, the photo may be sent to that option's provider to check it. We don't keep photos on our servers.</p>
+      <p>You can attach a photo as proof that you completed a task. The photo is picked or taken with your permission. With on-device AI, it is analyzed on your device. If you use Cloud photo verification, the photo is sent to our proxy and Vertex AI (or your own API key provider) solely to return a verification result. We don't keep photos on our servers.</p>
+
+      <h2>Optional Google Sign-In</h2>
+      <p>Signing in with Google in Settings is completely optional; core gameplay works without an account. If you choose to sign in, Firebase Authentication stores your Google account user ID and email address to associate your sign-in session.</p>
 
       <h2>Social features (optional)</h2>
-      <p>Friends, parties, group goals, and sharing are optional. If you use them, the information needed for those features, such as your display name, party membership, messages you send, and shared progress, is sent to and stored on our servers so other members can see it. You can leave a party or stop sharing at any time.</p>
+      <p>Friends, parties, group goals, and sharing are optional (currently disabled by default). If enabled and used, the information needed for those features, such as your display name, party membership, messages you send, and shared progress, is sent to and stored on our servers so other members can see it. You can leave a party or stop sharing at any time.</p>
 
-      <h2>Purchases</h2>
-      <p>Subscriptions are processed by Google Play. We don't receive your payment card details. We receive confirmation from Google Play that a subscription is active. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p>
+      <h2>Purchases and subscriptions</h2>
+      <p>One-time jewel pack purchases and auto-renewing Habitography Cloud Premium subscriptions are processed by Google Play Billing. We don't receive your payment card details. For Premium subscriptions, the app sends your Google Play purchase token to our proxy server, which verifies your active subscription status directly with Google Play so your daily cloud allowance stays in sync. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p>
 
       <h2>Permissions the app asks for</h2>
       <ul>
-        <li><strong>Internet:</strong> for model downloads, cloud AI, social features, and purchases.</li>
+        <li><strong>Internet:</strong> for model downloads, cloud AI, subscription verification, and purchases.</li>
         <li><strong>Notifications:</strong> to send the habit reminders you set up.</li>
         <li><strong>Vibration and run-on-boot:</strong> so reminders feel right and survive a restart.</li>
         <li><strong>Camera / photos:</strong> only when you choose to add a photo.</li>
       </ul>
 
-      <h2>Your choices</h2>
+      <h2 id="delete-account">Deleting your account and data</h2>
       <ul>
-        <li>Delete all local data by clearing the app's storage or uninstalling it.</li>
-        <li>To delete data we hold about you (cloud usage records or social data), email <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a> and we'll remove it.</li>
-        <li>You can turn off notifications, camera access, and cloud features at any time.</li>
+        <li><strong>In-app Google sign-in account:</strong> Open Habitography → <strong>Settings → Account → Delete Account</strong> to permanently delete your Firebase Authentication account immediately.</li>
+        <li><strong>Local save and device data:</strong> Clear the app's storage in Android settings or uninstall Habitography.</li>
+        <li><strong>Server quota or support records:</strong> Email <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a> (include your email address or approximate dates) and we will delete any associated server-side records.</li>
+        <li>You can turn off notifications, camera access, and cloud AI at any time in Settings.</li>
       </ul>
 
       <h2>Children</h2>
