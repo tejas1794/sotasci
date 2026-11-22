@@ -42,8 +42,8 @@
   <section class="section">
     <div class="wrap">
       <h1>Habitography Privacy Policy</h1>
-      <p class="text-muted">Effective date: November 20, 2026</p>
-      <p>Habitography ("the app") is made by SOTA Science Inc. ("Sotasci", "we"). This policy explains what data the app uses and where it goes, in plain language. Questions? Email <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a>.</p>
+      <p class="text-muted">Effective date: November 21, 2026</p>
+      <p>Habitography ("the app") is made by SOTA Science Inc. ("Sotasci", "we"). This policy explains what data the app uses and where it goes, in plain language. See also the <a href="habitography-terms.html">Habitography Terms of Service</a>. Questions? Email <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a>.</p>
 
       <h2>The short version</h2>
       <ul>
@@ -61,7 +61,7 @@
       <h2>Cloud AI</h2>
       <p>You can choose between Habitography Cloud (enabled by default for the 7-day trial, or with a Premium plan) or bringing your own API key:</p>
       <ul>
-        <li><strong>Habitography Cloud.</strong> The message text and relevant habit context needed to generate a reply (or a photo you submit for Cloud verification) are sent over HTTPS to our Cloud Run proxy and forwarded to Google Vertex AI to produce the reply. Our proxy stores only a daily turn counter and subscription status tied to a random device UUID. We do not log or store the content of your chats or photos, and Google Vertex AI does not use customer prompts to train models.</li>
+        <li><strong>Habitography Cloud.</strong> The message text and relevant habit context needed to generate a reply (or a photo you submit for Cloud verification) are sent over HTTPS to our Cloud Run proxy and forwarded to Google Vertex AI to produce the reply. Our proxy stores only a daily turn counter and subscription status tied to a random device UUID, and inspects client IP addresses transiently in memory for rate limiting and abuse prevention without logging or persisting them. We do not log or store the content of your chats or photos, and Google Vertex AI does not use customer prompts to train models.</li>
         <li><strong>Your own API key.</strong> If you enter your own key from a third-party AI provider (Anthropic, OpenAI, or Gemini), requests go directly from your device to that provider under its own terms and privacy policy. The key is stored on your device only.</li>
       </ul>
 
@@ -69,7 +69,7 @@
       <p>You can attach a photo as proof that you completed a task. The photo is picked or taken with your permission. With on-device AI, it is analyzed on your device. If you use Cloud photo verification, the photo is sent to our proxy and Vertex AI (or your own API key provider) solely to return a verification result. We don't keep photos on our servers.</p>
 
       <h2>Optional Google Sign-In</h2>
-      <p>Signing in with Google in Settings is completely optional; core gameplay works without an account. If you choose to sign in, Firebase Authentication stores your Google account user ID and email address to associate your sign-in session.</p>
+      <p>Signing in with Google in Settings is completely optional; core gameplay works without an account. If you choose to sign in, Firebase Authentication stores your Google account user ID, email address, and display name (along with your Google profile metadata) to associate your sign-in session.</p>
 
       <h2>Social features (optional)</h2>
       <p>Friends, parties, group goals, and sharing are optional (currently disabled by default). If enabled and used, the information needed for those features, such as your display name, party membership, messages you send, and shared progress, is sent to and stored on our servers so other members can see it. You can leave a party or stop sharing at any time.</p>
@@ -93,17 +93,42 @@
         <li>You can turn off notifications, camera access, and cloud AI at any time in Settings.</li>
       </ul>
 
-      <h2>Children</h2>
-      <p>Habitography is not directed at children under 13, and we don't knowingly collect data from them. If you believe a child has given us data, contact us and we'll delete it.</p>
+      <h2>Age requirement (18+)</h2>
+      <p>Habitography is intended for users aged 18 and older and is not directed at children under 13 or minors under 18. We do not knowingly collect personal data from children or minors. If you believe someone under 18 has provided us with personal data, email <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a> and we will delete it promptly.</p>
+
+      <h2>Legal bases for processing (GDPR &amp; UK GDPR)</h2>
+      <p>For residents of the European Economic Area (EEA) and the United Kingdom, <strong>SOTA Science Inc.</strong> (<a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a>) acts as the data controller for the personal data processed by Habitography on the following legal bases under Article 6(1) of the GDPR / UK GDPR:</p>
+      <ul>
+        <li><strong>Performance of a contract (Art. 6(1)(b)):</strong> Ephemeral Cloud AI chat and photo-proof processing when you initiate Cloud requests, verifying Google Play subscription status so paid entitlements work, and providing optional Google Sign-In when you choose to sign in.</li>
+        <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> Maintaining an anonymous random device UUID (<code>x-hq-device</code>) for trial/daily turn counters and performing ephemeral in-memory IP rate limiting to protect our Cloud Run proxy from abuse and fraud.</li>
+        <li><strong>Legal obligation (Art. 6(1)(c)):</strong> Processing or retaining limited records where necessary to comply with applicable laws, court orders, or regulatory obligations.</li>
+      </ul>
+
+      <h2>Service providers &amp; international data transfers</h2>
+      <p>We do not sell personal data or run third-party advertising networks. We use only the following infrastructure and service providers to operate optional and Cloud features:</p>
+      <ul>
+        <li><strong>Google Cloud (Cloud Run, Firestore, Vertex AI):</strong> Hosts our Cloud AI proxy, stores anonymous trial/quota and subscription verification records, and runs Cloud AI inference.</li>
+        <li><strong>Google Firebase Authentication / Google Sign-In:</strong> Processes optional Google Sign-In accounts if you choose to sign in.</li>
+        <li><strong>Google Play Billing:</strong> Processes in-app purchases and auto-renewing subscriptions and verifies active entitlements.</li>
+        <li><strong>Hugging Face:</strong> Used only when you manually choose to download an open-weight on-device AI model file.</li>
+      </ul>
+      <p>Data handled by Google Cloud and Firebase may be processed in the United States or other countries where Google operates, subject to Google's Data Processing Addendum and applicable safeguards such as Standard Contractual Clauses (SCCs) for EEA/UK transfers.</p>
+
+      <h2>Your privacy rights (GDPR, UK GDPR &amp; US state laws)</h2>
+      <ul>
+        <li><strong>EEA and UK residents (GDPR / UK GDPR):</strong> You have the right to request access to, rectification of, or erasure of your personal data; to restrict or object to processing based on legitimate interests; to receive portable data where applicable; to withdraw consent (where processing relies on consent); and to lodge a complaint with your local data protection supervisory authority.</li>
+        <li><strong>California and other US state residents (including CCPA/CPRA):</strong> You have the right to know and access the categories and specific pieces of personal information we collect, request correction or deletion of your personal information, and not be discriminated against for exercising privacy rights. SOTA Science Inc. does <strong>not</strong> "sell" or "share" personal information for cross-context behavioral advertising.</li>
+        <li><strong>How to exercise your rights:</strong> Use the in-app <strong>Settings → Account → Delete Account</strong> control for immediate Google Sign-In account deletion, or email <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a>. We respond to verified requests within <strong>30 days</strong> (or sooner where required by law).</li>
+      </ul>
 
       <h2>Security and retention</h2>
-      <p>Connections to our servers are encrypted. We keep server-side data only as long as needed to run the feature you use, or until you ask us to delete it.</p>
+      <p>All network connections to our Cloud Run proxy, Google Vertex AI, Firebase, Google Play, and model hosts are encrypted in transit over HTTPS/TLS. Cloud AI chat prompts, habit context sent in requests, and proof photos are processed strictly ephemerally in memory and are never logged or retained by our proxy. Optional Firebase Authentication account records remain until you delete your account in-app or ask us to delete them. Anonymous device quota counters and active subscription verification records are kept only while needed to enforce quotas and verify entitlements, or until deleted upon request.</p>
 
       <h2>Changes to this policy</h2>
       <p>If this policy changes, we'll update the effective date above and, for meaningful changes, note it in the app.</p>
 
       <h2>Contact</h2>
-      <p>SOTA Science Inc. &middot; <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a> &middot; <a href="contact.html">contact form</a></p>
+      <p>SOTA Science Inc. &middot; <a href="mailto:privacy@sotasci.com">privacy@sotasci.com</a> &middot; <a href="habitography-terms.html">Terms of Service</a> &middot; <a href="contact.html">contact form</a></p>
     </div>
   </section>
 </main>
@@ -115,6 +140,7 @@
       <li><a href="privacy.html">Privacy</a></li>
       <li><a href="mieru-privacy.html">Mieru Privacy</a></li>
       <li><a href="habitography-privacy.html">Habitography Privacy</a></li>
+      <li><a href="habitography-terms.html">Habitography Terms</a></li>
       <li><a href="support.html">Support</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
